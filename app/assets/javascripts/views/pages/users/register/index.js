@@ -194,29 +194,7 @@ export default class Register extends Component {
 
         return <PromiseWrapper renderOnError={true} computeEntities={computeEntities}>
 
-            <h1>{selectn('response.title', computeDialect2)} {intl.trans('register', 'Register', 'first')}</h1>
-
             <div className="row" style={{marginTop: '15px'}}>
-                <div className={classNames('col-xs-12', 'col-md-6')}>
-                    <Paper style={{padding: '15px'}}>
-                        <h2>Do I need to register?</h2>
-                        <p>Registration is intended for individuals who are engaged in language revitalization work.</p>
-                        <p>If you want to learn a language or learn about a community, <strong>most information is available to the public without registration</strong>.</p>
-                        <p>You can get started by clicking "<strong><a href="/explore/FV/sections/Data">Choose a Language</a></strong>", pick your language, and then click "Learn Our Language".</p>
-                        <RaisedButton label={intl.translate('choose_lang', 'Choose a Language', 'first')} primary={true} onClick={(e) => NavigationHelpers.navigate('/explore/FV/sections/Data', this.props.pushWindowPath)}/>
-                    </Paper>
-                </div>
-                <div className={classNames('col-xs-12', 'col-md-6')}>
-                    <Paper style={{padding: '15px'}}>
-                        <h2>Registration</h2>
-                        <p>If you are engaged in language revitalization work or want to join a community as a member, you can do so by using our <strong><a href="https://firstvoices.atlassian.net/servicedesk/customer/portal/1/create/15" target="_blank">registration form</a></strong> (preferred) or by emailing support@fpcc.ca</p>
-                        <p>Your request will need to be approved by the community's language administrator.</p>
-                        <RaisedButton label="Submit Registration Request" primary={true} linkButton={true} href="https://firstvoices.atlassian.net/servicedesk/customer/portal/1/create/15" target="_blank" />
-                    </Paper>
-                </div>
-            </div>
-
-            <div className="row" style={{marginTop: '15px', display: 'none'}}>
 
                 <div className={classNames('col-xs-8', 'col-md-10')}>
                     <form onSubmit={this._onRequestSaveForm.bind(this, this.props.computeLogin)}>
